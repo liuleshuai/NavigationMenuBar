@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/taobao"
+        android:icon="@mipmap/icon_home_pager_not_selected"
+        android:title="淘宝" />
+    <item
+        android:id="@+id/jingdong"
+        android:icon="@mipmap/icon_like_article_not_selected"
+        android:title="京东" />
+    <item
+        android:id="@+id/yamaxun"
+        android:icon="@mipmap/icon_navigation_not_selected"
+        android:title="亚马逊" />
+</menu>
