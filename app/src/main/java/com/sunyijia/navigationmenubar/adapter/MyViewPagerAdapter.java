@@ -12,12 +12,14 @@ import android.widget.TextView;
 
 import com.sunyijia.navigationmenubar.R;
 
+import java.util.List;
+
 public class MyViewPagerAdapter extends FragmentPagerAdapter {
-    private Class[] fragmentClass;
-    private String[] textArray;
+    private List<Class> fragmentClass;
+    private List<String> textArray;
     private Context mContext;
 
-    public MyViewPagerAdapter(FragmentManager fm, Class[] fragmentClass, String[] textArray, Context mContext) {
+    public MyViewPagerAdapter(FragmentManager fm, List<Class> fragmentClass, List<String> textArray, Context mContext) {
         super(fm);
         this.fragmentClass = fragmentClass;
         this.textArray = textArray;
@@ -26,12 +28,12 @@ public class MyViewPagerAdapter extends FragmentPagerAdapter {
 
     @Override
     public Fragment getItem(int position) {
-        return Fragment.instantiate(mContext, fragmentClass[position].getCanonicalName());
+        return Fragment.instantiate(mContext, fragmentClass.get(position).getCanonicalName());
     }
 
     @Override
     public int getCount() {
-        return textArray.length;
+        return textArray.size();
     }
 
     @Nullable
@@ -44,7 +46,8 @@ public class MyViewPagerAdapter extends FragmentPagerAdapter {
         View view = LayoutInflater.from(mContext).inflate(R.layout.tab_layout_item, null, false);
         TextView tv = view.findViewById(R.id.tv);
         ImageView iv = view.findViewById(R.id.iv);
-        tv.setText(textArray[i]);
+        tv.setText(textArray.get(i));
+        iv.setImageResource(R.mipmap.ic_launcher);
         return view;
     }
 }

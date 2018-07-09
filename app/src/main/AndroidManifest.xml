@@ -18,7 +18,8 @@
         </activity>
         <activity android:name=".activity.FragmentTabHostActivity" />
         <activity android:name=".activity.TabLayoutActivity" />
-        <activity android:name=".activity.BottomNavigationViewActivity"></activity>
+        <activity android:name=".activity.BottomNavigationViewActivity" />
+        <activity android:name=".activity.FragmentTabHost2Activity"></activity>
     </application>
 
 </manifest>

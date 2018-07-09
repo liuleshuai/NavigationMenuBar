@@ -4,45 +4,49 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    tools:layout_editor_absoluteY="81dp">
+    tools:context=".MainActivity">
 
     <Button
         android:id="@+id/FragmentTabHost"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="20dp"
         android:background="@color/colorAccent"
-        android:padding="20dp"
         android:text="FragmentTabHost"
         android:textAllCaps="false"
         app:layout_constraintBottom_toTopOf="@+id/TabLayout"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.283"
         app:layout_constraintVertical_chainStyle="packed" />
+    <Button
+        android:id="@+id/Tabvp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="FragmentTabHostVp"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toTopOf="@+id/TabLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/FragmentTabHost" />
 
     <Button
         android:id="@+id/TabLayout"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="20dp"
+        android:layout_height="60dp"
         android:background="@color/colorPrimary"
         android:padding="20dp"
         android:text="TabLayout"
         android:textAllCaps="false"
         app:layout_constraintBottom_toTopOf="@+id/BottomNavigationView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/FragmentTabHost" />
+        app:layout_constraintTop_toBottomOf="@+id/Tabvp" />
 
     <Button
         android:id="@+id/BottomNavigationView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="20dp"
         android:background="@color/colorPrimaryDark"
         android:padding="20dp"
         android:text="BottomNavigationView"

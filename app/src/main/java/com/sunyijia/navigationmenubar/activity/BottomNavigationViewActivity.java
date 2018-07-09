@@ -13,6 +13,8 @@ import com.sunyijia.navigationmenubar.fragment.FirstFragment;
 import com.sunyijia.navigationmenubar.fragment.SecondFragment;
 import com.sunyijia.navigationmenubar.fragment.ThirdFragment;
 
+import java.util.Arrays;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
@@ -36,7 +38,7 @@ public class BottomNavigationViewActivity extends AppCompatActivity {
     }
 
     private void init() {
-        MyViewPagerAdapter adapter = new MyViewPagerAdapter(getSupportFragmentManager(), fragmentClass, textViewArray, this);
+        MyViewPagerAdapter adapter = new MyViewPagerAdapter(getSupportFragmentManager(), Arrays.asList(fragmentClass), Arrays.asList(textViewArray), this);
         vp.setAdapter(adapter);
         vp.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
